@@ -1,6 +1,6 @@
 using Logging
 
-function server(port, log_dir; task_file="tasks", finished_tasks_file="finished_tasks")
+function server(port, log_dir; tasks_file="tasks", finished_tasks_file="finished_tasks")
     # Load tasks
     tasks = open(tasks_file) do file
         map(readlines(file)) do line
