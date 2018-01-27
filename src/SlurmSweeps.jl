@@ -1,5 +1,8 @@
 module SlurmSweeps
 
-# package code goes here
+include("server.jl")
+include("client.jl")
+include("instance.jl")
+include("setup.jl")
 
 end # module
