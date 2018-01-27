@@ -1,0 +1,8 @@
+#+TITLE: SlurmSweeps.jl
+#+AUTHOR: Stefanos Carlström
+#+EMAIL: stefanos.carlstrom@gmail.com
+
+[[https://travis-ci.org/jagot/SlurmSweeps.jl][https://travis-ci.org/jagot/SlurmSweeps.jl.svg?branch=master]]
+[[https://coveralls.io/github/jagot/SlurmSweeps.jl?branch=master][https://coveralls.io/repos/github/jagot/SlurmSweeps.jl/badge.svg?branch=master]]
+[[http://codecov.io/gh/jagot/SlurmSweeps.jl][http://codecov.io/gh/jagot/SlurmSweeps.jl/branch/master/graph/badge.svg]]
+
