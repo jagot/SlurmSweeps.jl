@@ -1,7 +1,7 @@
 function instance(;port=12385, log_dir="logs")
     procid = parse(Int,ENV["SLURM_PROCID"])
     nodes = ENV["SLURM_NODELIST"]
-    nodes = split(strip(readstring(`scontrol show hostname $(nodes)`)), "\n")
+    nodes = readlines(`scontrol show hostname $(nodes)`)
     master_node = nodes[1]
 
     procid == 0 && mkpath(log_dir)

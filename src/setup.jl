@@ -1,6 +1,6 @@
 function sbatch(file; kwargs...)
     for (k,v) in kwargs
-        k = replace(string(k), "_", "-")
+        k = replace(string(k), "_"=>"-")
         v = string(v)
         kw = if length(k) == 1
             "-$(k) $(v)"
@@ -35,7 +35,7 @@ function setup_sweep(tasks::AbstractVector{String}, name::String;
             write(file, "$(cmd)\n")
         end
 
-        write(file, "srun -Q -N \${SLURM_NNODES} -n \${SLURM_NPROCS} julia -e 'import SlurmSweeps; SlurmSweeps.instance(port=$(port), log_dir=\"$(log_dir)\")'")
+        write(file, "srun -Q -N \${SLURM_NNODES} -n \${SLURM_NPROCS} julia -e 'using Pkg; Pkg.activate(\".\"); import SlurmSweeps; SlurmSweeps.instance(port=$(port), log_dir=\"$(log_dir)\")'")
     end
 end
 

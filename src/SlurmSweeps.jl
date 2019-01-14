@@ -1,4 +1,8 @@
 module SlurmSweeps
+using Logging
+using DelimitedFiles
+using Random
+using Sockets
 
 include("server.jl")
 include("client.jl")
